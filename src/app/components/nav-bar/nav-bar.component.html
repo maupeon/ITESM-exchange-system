@@ -1,0 +1,29 @@
+<div class="navbar-nav bg-gradient-primary sidebar sidebar-dark collapse navbar-collapse"
+[collapse]="collapseMessage" id="accordionSidebar" *ngIf="currentUser">
+
+  <!-- Sidebar - Brand -->
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+    <div class="sidebar-brand-icon rotate-n-15">
+      <fa class="fas fa-fw" name="folder"></fa>
+    </div>
+    <div class="sidebar-brand-text mx-3">ITESM</div>
+  </a>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider">
+
+  <!--Heading-->
+  <div class="sidebar-heading">
+    Class
+  </div>
+
+  <!-- Nav Item - My classes -->
+  <div class="nav-item" *ngIf="!hidden" (HiddenEvent)="Click($event)">
+    <a class="nav-link" href="">
+      <fa class="fas fa-fw" name="file-o"></fa>
+      <span>My classes</span></a>
+  </div>
+
+</div>
+
+<!-- End of Sidebar -->

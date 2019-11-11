@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>{{'Register.title2' | translate }}</h1>
+    <form (ngSubmit)="onSubmit()" #perfilForm="ngForm">
+    
+      <div class="form-group">
+        <label for="correo">{{'Register.mail' | translate }}</label>
+        <input type="text" class="form-control" id="correo"
+                required
+                disabled
+                [(ngModel)]="perfilModel._id" name="correo"
+                #correo="ngModel">
+         <div [hidden]="correo.valid || correo.pristine"
+              class="alert alert-danger">
+              {{'Register.mail' | translate }} {{'Register.required' | translate }}
+         </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">{{'Register.password' | translate }}</label>
+        <input type="password" class="form-control" id="password"
+                [(ngModel)]="perfilModel.password" name="password"
+                #password="ngModel">
+         <div [hidden]="password.valid || password.pristine"
+              class="alert alert-danger">
+              {{'Register.password' | translate }} {{'Register.required' | translate }}
+         </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary"
+              [disabled]="!perfilForm.form.valid">{{'Register.edit' | translate }}</button>
+
+    </form>
+</div>

@@ -1,0 +1,97 @@
+{
+  "NavBar":{
+     "title": "Facturado",
+     "div-title 1": "Facturas",
+     "sub-title 1": "Reporte de Facturas",
+     "div-title 2": "Clientes",
+     "sub-title 2": "Reporte Clientes",
+     "div-title 3": "Mis Facturas",
+     "sub-title 3": "Facturas Recibidas",
+     "div-title 4": "Generar",
+     "sub-title 4": "Generar Factura"
+   },
+   "TopBar":{
+     "translator": "idioma",
+     "currency": "moneda",
+     "profile": "perfil",
+     "logout": "salir",
+     "es": "Español",
+     "en": "Ingles",
+     "peso": "Peso mexicano$",
+     "dolar": "Dolar $",
+     "euro": "Euro €"
+   },
+   "Footer":{
+     "disclaimer": "Derechos de Autor; Facturado 2019"
+   },
+   "Reportes":{
+     "title": "Reporte de Facturas",
+     "title2": "Reporte Clientes",
+     "title3": "Mis Facturas",
+     "chart": "Gráfico",
+     "successful": "exitosas",
+     "pending": "pendientes",
+     "cancel": "canceladas",
+     "search": "Buscar...",
+     "business name": "Razón Social",
+     "date": "Fecha",
+     "amount": "Monto",
+     "status": "Estatus",
+     "action": "Acciones",
+     "name": "Nombre",
+     "lastname": "Apellido"
+   },
+   "Generate":{
+     "title": "Generar Factura",
+     "provider": "Proveedor",
+     "dir provider": "Dirección Proveedor",
+     "rfc provider": "RFC Proveedor",
+     "client": "Cliente",
+     "dir client": "Dirección Cliente",
+     "rfc client": "RFC Cliente ",
+     "date": "Fecha",
+     "taxes": "Impuestos",
+     "total": "Total",
+     "signature": "Firma Digital",
+     "stamp": "Sello Digital",
+     "required": " es necesario",
+     "create": "Crear"
+   },
+   "Register": {
+     "title": "Registro Usuarios",
+     "message": "Selecciona de que forma deseas registrarte.",
+     "business": "Negocio",
+     "client": "Cliente",
+     "name": "Nombre",
+     "e-name": "Nombre Negocio",
+     "business name": "Razón Social",
+     "lastname": "Apellido",
+     "mail": "Correo",
+     "act": "Acta Constitutiva",
+     "account": "Estado de Cuenta",
+     "file": "Archivo",
+     "required": " es necesario",
+     "create": "Crear",
+     "title2": "Perfil",
+     "password": "Contraseña",
+     "address": "Dirección",
+     "edit": "Editar"
+   },
+   "Concept":{
+     "title": "Concepto",
+     "name": "Nombre",
+     "quantity": "Cantidad",
+     "price": "Precio Unitario",
+     "required": " es necesario",
+     "add": "Añadir",
+     "total": "Total",
+     "amount": "Importe"
+   },
+   "LoginM":{
+     "remember": "Recordarme!",
+     "enter": "Entrar",
+     "register": "Crea tu cuenta!",
+     "password": "Contraseña",
+     "mail": "Ingresa tu RFC..."
+   }
+}

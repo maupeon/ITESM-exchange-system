@@ -1,0 +1,133 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Factura</h6>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table>
+              <tr>
+                <td>
+                  <div style="height:400px; overflow:auto;">
+                    <table>
+                      <tr>
+                        <td>{{'Generate.provider' | translate }}:</td>
+                        <td>{{facturaModel.proveedor}}</td>
+                      </tr>
+                      <tr>
+                        <td>{{'Generate.client' | translate }}:</td>
+                        <td>{{facturaModel.cliente}}</td>
+                      </tr>
+                      <tr>
+                        <td>{{'Generate.dir provider' | translate }}:</td>
+                        <td>{{facturaModel.direccion_proveedor}}</td>
+                      </tr>
+                      <tr>
+                        <td>{{'Generate.dir client' | translate }}:</td>
+                        <td>{{facturaModel.direccion_cliente}}</td>
+                      </tr>
+                      <tr>
+                        <td>{{'Generate.rfc client' | translate }}:</td>
+                        <td>{{facturaModel.rfc_cliente}}</td>
+                      </tr>
+                      <tr>
+                        <td>{{'Generate.rfc provider' | translate }}:</td>
+                        <td>{{facturaModel.rfc_proveedor}}</td>
+                      </tr>
+                      <tr>
+                        <td>{{'Generate.date' | translate }}:</td>
+                        <td>{{facturaModel.fecha}}</td>
+                      </tr>
+                      <tr>
+                        <td>{{'Generate.taxes' | translate }}:</td>
+                        <td>{{facturaModel.impuesto}}</td>
+                      </tr>
+                      <tr>
+                        <td>{{'Generate.total' | translate }}:</td>
+                        <td>{{facturaModel.total}}</td>
+                      </tr>
+                      <tr>
+                        <td>{{'Generate.signature' | translate }}:</td>
+                        <td>{{facturaModel.firmaDigital}}</td>
+                      </tr>
+                      <tr>
+                        <td>{{'Generate.stamp' | translate }}:</td>
+                        <td>{{facturaModel.selloDigital}}</td>
+                      </tr>
+                    </table>
+
+                  </div>
+
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Conceptos</h6>
+        </div>
+        <ul>
+          <li class="nav-item dropdown no-arrow" dropdown>
+            <a dropdownToggle class="nav-link dropdown-toggle"  id="userDropdown"
+            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <fa class="fas fa-fw" name="money"></fa>
+              <span>{{'TopBar.currency' | translate }}</span>
+            </a>
+            <!-- Dropdown - User Information -->
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+              <a class="dropdown-item" (click)="moneda('MXN')">
+                <span>{{'TopBar.peso' | translate }}</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="moneda('USD');">
+                <span>{{'TopBar.dolar' | translate }}</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="moneda('EUR');">
+                <span>{{'TopBar.euro' | translate }}</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-sm fixed_header">
+              <thead>
+                <tr>
+                  <th>{{'Concept.title' | translate }}</th>
+                  <th>{{'Concept.quantity' | translate }}</th>
+                  <th>{{'Concept.price' | translate }}</th>
+                  <th>{{'Concept.amount' | translate }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let concepto of conceptos" tabla-conceptos [concepto]="concepto"></tr>
+              </tbody>
+            </table>
+          </div>
+          <h5>{{'Generate.taxes' | translate }}: {{facturaModel.impuesto}}</h5>
+          <h3>{{'Concept.total' | translate }}: {{facturaModel.total}}</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <button type="button" class="btn btn-outline-primary btnFactura">PDF</button>
+    </div>
+    <div class="col-lg-6">
+      <button type="button" class="btn btn-outline-success btnFactura">XML</button>
+    </div>
+
+  </div>
+
+</div>
+<!-- /.container-fluid -->

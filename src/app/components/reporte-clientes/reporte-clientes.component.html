@@ -1,0 +1,60 @@
+<!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">{{class.name}}</h1>
+  </div>
+
+
+  <!-- Content Row -->
+<div class="row">
+    <div class="col-lg-12">
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div>
+          <div class="title-header">
+            <h3>Week {{week_option}}</h3>
+          </div>
+          <div class="input-header">
+              <div>
+                <label>New weekly report: </label>
+              </div>
+              <div>
+                  <input type="file" (change)="onChange($event.target.files)">
+              </div>
+          </div>
+          <div class="select-header">
+            <select class="form-control" id="week"
+              [(ngModel)]="week_option" name="week"
+              #week="ngModel"
+              (change)="selectWeek()"
+            >
+             
+             <option *ngFor="let week of weeks_number" [value]="week">{{week}}</option>
+           </select>
+          </div>
+          
+        </div>
+        <!-- Card Body -->
+          <div class="card-body">
+            <div class="table-responsive">
+              <table id="client-table">
+                <thead>
+                  <tr>
+                    <th>Student</th>
+                    <th>Academic</th>
+                    <th>Team work</th>
+                    <th>Communications skills</th>
+                  </tr>
+                  
+                </thead>
+
+                <tbody>
+                  <tr *ngFor="let grade of current_grades" tabla-clientes [grade]="grade"></tr>
+                </tbody>
+
+              </table>
+
+            </div>
+          </div>
+      </div>
+    </div>
+</div>

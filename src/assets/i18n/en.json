@@ -1,0 +1,98 @@
+{
+ "NavBar":{
+    "title": "Facturado",
+    "div-title 1": "Invoices",
+    "sub-title 1": "Invoices Report",
+    "div-title 2": "Clients",
+    "sub-title 2": "Clients Report",
+    "div-title 3": "My Invoices",
+    "sub-title 3": "Received Invoices",
+    "div-title 4": "Generate",
+    "sub-title 4": "Generate Invoice"
+  },
+  "TopBar":{
+    "translator": "language",
+    "currency": "currency",
+    "profile": "profile",
+    "logout": "logout",
+    "es": "Spanish",
+    "en": "English",
+    "peso": "Mexican peso $",
+    "dolar": "US Dollar $",
+    "euro": "Euro €"
+  },
+  "Footer":{
+    "disclaimer": "Copyright; Facturado 2019"
+  },
+  "Reportes":{
+    "title": "Invoices Report",
+    "title2": "Clients Report",
+    "title3": "My Invoices",
+    "chart": "Chart",
+    "successful": "successful",
+    "pending": "pending",
+    "canceled": "canceled",
+    "search": "Search...",
+    "business name": "Business Name",
+    "date": "Date",
+    "amount": "Amount",
+    "status": "Status",
+    "action": "Actions",
+    "name": "Name",
+    "lastname": "Lastname"
+  },
+  "Generate":{
+    "title": "Generate Invoice",
+    "provider": "Provider",
+    "dir provider": "Provider Address",
+    "rfc provider": "Provider RFC",
+    "client": "Client",
+    "dir client": "Client Address",
+    "rfc client": "Client RFC",
+    "date": "Date",
+    "taxes": "Taxes",
+    "total": "Total",
+    "signature": "Digital Siganture",
+    "stamp": "Digital Stamp",
+    "required": " is required",
+    "create": "Create"
+  },
+  "Register": {
+    "title": "User Registry",
+    "message": "Select the type of Register.",
+    "business": "Business",
+    "client": "Client",
+    "name": "Name",
+    "e-name": "Enterprise Name",
+    "business name": "Business Name",
+    "lastname": "Lastname",
+    "mail": "Mail",
+    "act": "Constitutive Act",
+    "account": "Account Status",
+    "file": "File",
+    "required": " is required",
+    "create": "Create",
+    "title2": "Profile",
+    "password": "Password",
+    "address": "Address",
+    "edit": "Edit"
+  },
+  "Concept":{
+    "title": "Concept",
+    "name": "Name",
+    "quantity": "Quantity",
+    "price": "Unitary Price",
+    "required": " is required",
+    "add": "Add",
+    "total": "Total",
+    "amount": "Amount"
+  },
+  "LoginM":{
+    "remember": "Remember Me!",
+    "enter": "Login",
+    "register": "Create Your Account!",
+    "password": "Password",
+    "mail": "Enter RFC..."
+  }
+
+}

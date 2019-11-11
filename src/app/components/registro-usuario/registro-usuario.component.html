@@ -1,0 +1,33 @@
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="registro-empresa">{{'Register.business' | translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="registro-clientes">{{'Register.client' | translate }}</a>
+      </li>
+      <li class="nav-item dropdown no-arrow" dropdown>
+        <a dropdownToggle class="nav-link dropdown-toggle"  id="userDropdown"
+        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <fa class="fas fa-fw" name="book"></fa>
+          {{'TopBar.translator' | translate }}
+        </a>
+        <!-- Dropdown - User Information -->
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+          <a class="dropdown-item" [ngClass]="{'disabled': activeLang == 'es'}" (click)="Lenguaje('es')">
+            <span>{{'TopBar.es' | translate }}</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [ngClass]="{'disabled': activeLang == 'en'}" (click)="Lenguaje('en')">
+            <span>{{'TopBar.en' | translate }}</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{'Register.title' | translate }}</h5>
+    <p class="card-text">{{'Register.message' | translate }}</p>
+  </div>
+</div>

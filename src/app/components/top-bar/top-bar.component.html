@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" *ngIf="currentUser">
+
+  <!-- Topbar Toggle -->
+  <button id="sidebarToggleTop" class="btn btn-link  rounded-circle navbar-toggle collapsed"
+  (click)="Collapse();" aria-expanded="true">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Topbar User -->
+  <div class="nav-item dropdown no-arrow col-md-1 col-sm-6 col-lg-4 ghost">
+    <a class="nav-link dropdown-toggle" href="menu" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <h1 class="h3 text-gray-800 sidebar-brand-text mx-3">{{username.mail}}</h1>
+    </a>
+  </div>
+
+
+  <!-- Topbar Navbar -->
+  <div class="navbar-nav ml-auto">
+
+    <div class="topbar-divider d-none d-md-block"></div>
+
+    <!-- Nav Item - User Information -->
+    <div class="nav-item">
+      <a class="nav-link" href="perfil">
+        <fa class="fas fa-fw" name="user"></fa>
+        <span>Profile</span></a>
+    </div>
+
+    <div class="nav-item">
+      <a class="nav-link" (click)="logout()">>
+        <fa class="fas fa-fw" name="sign-out"></fa>
+        <span>Logout</span></a>
+    </div>
+
+  </div>
+
+</nav>

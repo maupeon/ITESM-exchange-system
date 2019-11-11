@@ -1,0 +1,179 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1>{{'Generate.title' | translate }}</h1>
+  </div>
+  <div class="col-lg-6">
+    <form (ngSubmit)="onSubmit(); facturaForm.reset()" #facturaForm="ngForm">
+      <div class="form-group">
+        <label for="proveedor">{{'Generate.provider' | translate }}</label>
+        <input type="text" class="form-control" id="proveedor"
+               required
+               [(ngModel)]="facturaModel.proveedor" name="proveedor"
+               #proveedor="ngModel">
+        <div [hidden]="proveedor.valid || proveedor.pristine"
+             class="alert alert-danger">
+           {{'Generate.provider' | translate }} {{'Generate.required' | translate }}
+         </div>
+      </div>
+
+    <div class="form-group">
+      <label for="direccion_proveedor">{{'Generate.dir provider' | translate }}</label>
+      <input type="text" class="form-control" id="direccion_proveedor"
+              required
+              [(ngModel)]="facturaModel.direccion_proveedor" name="direccion_proveedor"
+              #direccion_proveedor="ngModel">
+       <div [hidden]="direccion_proveedor.valid || direccion_proveedor.pristine"
+            class="alert alert-danger">
+            {{'Generate.dir provider' | translate }} {{'Generate.required' | translate }}
+       </div>
+    </div>
+
+    <div class="form-group">
+      <label for="rfc_proveedor">{{'Generate.rfc provider' | translate }}</label>
+      <input type="text" class="form-control" id="rfc_proveedor"
+              required
+              [(ngModel)]="facturaModel.rfc_proveedor" name="rfc_proveedor"
+              #rfc_proveedor="ngModel">
+       <div [hidden]="rfc_proveedor.valid || rfc_proveedor.pristine"
+            class="alert alert-danger">
+            {{'Generate.rfc provider' | translate }} {{'Generate.required' | translate }}
+       </div>
+    </div>
+
+    <div class="form-group">
+        <label for="cliente">{{'Generate.client' | translate }}</label>
+        <select class="form-control" id="cliente"
+           required
+           [(ngModel)]="facturaModel.cliente" name="cliente"
+           #cliente="ngModel">
+          
+          <option *ngFor="let cliente of clientes" [value]="cliente">{{cliente}}</option>
+        </select>
+        <div [hidden]="cliente.valid || cliente.pristine"
+             class="alert alert-danger">
+            {{'Generate.client' | translate }} {{'Generate.required' | translate }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="direccion_cliente">{{'Generate.dir client' | translate }}</label>
+        <input type="text" class="form-control" id="direccion_cliente"
+                required
+                [(ngModel)]="facturaModel.direccion_cliente" name="direccion_cliente"
+                #direccion_cliente="ngModel">
+         <div [hidden]="direccion_cliente.valid || direccion_cliente.pristine"
+              class="alert alert-danger">
+              {{'Generate.dir client' | translate }} {{'Generate.required' | translate }}
+         </div>
+    </div>
+
+    <div class="form-group">
+      <label for="rfc_cliente">{{'Generate.rfc client' | translate }}</label>
+      <input type="text" class="form-control" id="rfc_cliente"
+              required
+              [(ngModel)]="facturaModel.rfc_cliente" name="rfc_cliente"
+              #rfc_cliente="ngModel">
+       <div [hidden]="rfc_cliente.valid || rfc_cliente.pristine"
+            class="alert alert-danger">
+            {{'Generate.rfc client' | translate }} {{'Generate.required' | translate }}
+       </div>
+    </div>
+
+    <div class="form-group">
+      <label for="fecha">{{'Generate.date' | translate }}</label>
+      <input type="date" class="form-control" id="fecha"
+              required
+              [(ngModel)]="facturaModel.fecha" name="fecha"
+              #fecha="ngModel">
+       <div [hidden]="fecha.valid || fecha.pristine"
+            class="alert alert-danger">
+            {{'Generate.date' | translate }} {{'Generate.required' | translate }}
+       </div>
+    </div>
+
+    <div class="form-group">
+      <label for="impuesto">{{'Generate.taxes' | translate }}</label>
+      <input type="number" class="form-control" id="impuesto"
+             required
+             [(ngModel)]="facturaModel.impuesto" name="impuesto"
+             #impuesto="ngModel">
+      <div [hidden]="impuesto.valid || impuesto.pristine"
+           class="alert alert-danger">
+         {{'Generate.taxes' | translate }} {{'Generate.required' | translate }}
+      </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary"
+            [disabled]="!facturaForm.form.valid">{{'Generate.create' | translate }}</button>
+
+  </form>
+</div>
+
+<!--- Concepto Form -->
+<div class="col-lg-6">
+  <h4>{{'Concept.title' | translate }}</h4>
+    <form (ngSubmit)="agregarConcepto(); conceptoForm.reset()" #conceptoForm="ngForm">
+      <div class="form-group">
+        <label for="nombre">{{'Concept.name' | translate }}</label>
+        <input type="text" class="form-control" id="nombre"
+               required
+               [(ngModel)]="conceptoModel.nombre" name="nombre"
+               #nombre="ngModel">
+        <div [hidden]="nombre.valid || nombre.pristine"
+             class="alert alert-danger">
+           {{'Concept.name' | translate }} {{'Concept.required' | translate }}
+        </div>
+      </div>
+
+        <div class="form-group">
+          <label for="impuesto">{{'Concept.quantity' | translate }}</label>
+          <input type="number" class="form-control" id="cantidad"
+                 required
+                 [(ngModel)]="conceptoModel.cantidad" name="cantidad"
+                 #cantidad="ngModel">
+          <div [hidden]="cantidad.valid || cantidad.pristine"
+               class="alert alert-danger">
+             {{'Concept.quantity' | translate }} {{'Concept.required' | translate }}
+          </div>
+        </div>
+
+      <div class="form-group">
+        <label for="precio_unitario">{{'Concept.price' | translate }}</label>
+        <input type="number" class="form-control" id="precio_unitario"
+               required
+               [(ngModel)]="conceptoModel.precio_unitario" name="precio_unitario"
+               #precio_unitario="ngModel">
+        <div [hidden]="precio_unitario.valid || precio_unitario.pristine"
+             class="alert alert-danger">
+           {{'Concept.price' | translate }} {{'Concept.required' | translate }}
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary"
+      [disabled]="!conceptoForm.form.valid">{{'Concept.add' | translate }}</button>
+    </form>
+
+    <hr>
+
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-sm fixed_header">
+            <thead>
+              <tr>
+                <th>{{'Concept.title' | translate }}</th>
+                <th>{{'Concept.quantity' | translate }}</th>
+                <th>{{'Concept.price' | translate }}</th>
+                <th>{{'Concept.amount' | translate }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let concepto of conceptos" tabla-conceptos [concepto]="concepto"></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>{{'Concept.total' | translate }}: {{facturaModel.total}}</h3>
+      </div>
+    </div>
+
+</div>

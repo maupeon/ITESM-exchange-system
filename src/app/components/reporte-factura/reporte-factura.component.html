@@ -1,0 +1,63 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">My Classes</h1>
+</div>
+
+
+<!-- Content Row -->
+
+<div class="row">
+
+
+  <div class="col-lg-12">
+
+    <div class="card shadow mb-4">
+      <!-- Card Header - Dropdown -->
+      <nav class="navbar navbar-expand navbar-light bg-light topbar static-top">
+
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 pt-3 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-white border-0 small" placeholder="{{'Reportes.search' | translate }}" aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <fa class="fas fa-sm" name="search"></fa>
+                </button>
+              </div>
+            </div>
+          </form>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown no-arrow d-sm-none">
+            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <fa class="fas fa-fw" name="search"></fa>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Card Body -->
+      <div class="card-body">
+        <div class="table-responsive">
+          <table id="exitosa-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Class</th>
+                <th>Students</th>
+                <th class="Acciones">Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let class of classes" tabla-facturas [class]="class" ></tr>
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
