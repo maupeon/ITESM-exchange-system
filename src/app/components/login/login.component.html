@@ -17,42 +17,18 @@
               <form class="user">
                 <div class="form-group">
                   <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                  aria-describedby="emailHelp" placeholder="{{'LoginM.mail' | translate }}" name="rfc" [(ngModel)]="rfc">
+                  aria-describedby="emailHelp" placeholder="Username" name="rfc" [(ngModel)]="rfc">
                 </div>
                 <div class="form-group">
                   <input type="password" class="form-control form-control-user" id="exampleInputPassword"
-                  placeholder="{{'LoginM.password' | translate }}" name="contrasena" [(ngModel)]="contrasena">
+                  placeholder="Password" name="contrasena" [(ngModel)]="contrasena">
                 </div>
-                <div class="form-group">
-                  <div class="custom-control custom-checkbox small">
-                    <input type="checkbox" class="custom-control-input" id="customCheck">
-                    <label class="custom-control-label" for="customCheck">{{'LoginM.remember' | translate }}</label>
-                  </div>
-                </div>
+             
                 <button href="menu" class="btn btn-primary btn-user btn-block"
                 (click)="onSubmit();">
                   {{'LoginM.enter' | translate }}
                 </button>
               </form>
-              <ul>
-                <li class="nav-item dropdown no-arrow" dropdown>
-                  <a dropdownToggle class="nav-link dropdown-toggle"  id="userDropdown"
-                  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <fa class="fas fa-fw" name="book"></fa>
-                    <span>{{'TopBar.translator' | translate }}</span>
-                  </a>
-                  <!-- Dropdown - User Information -->
-                  <div *dropdownMenu class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" [ngClass]="{'disabled': activeLang == 'es'}" (click)="Lenguaje('es')">
-                      <span>{{'TopBar.es' | translate }}</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" [ngClass]="{'disabled': activeLang == 'en'}" (click)="Lenguaje('en')">
-                      <span>{{'TopBar.en' | translate }}</span>
-                    </a>
-                  </div>
-                </li>
-              </ul>
 
             </div>
           </div>

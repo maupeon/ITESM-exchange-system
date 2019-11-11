@@ -8,7 +8,7 @@ import { map, catchError, tap } from 'rxjs/operators';
 })
 export class ClassesService {
 
-  endpoint = 'http://localhost:3000/clases';
+  endpoint = 'https://api-itesm.azurewebsites.net/clases';
   httpOptions = {
      headers: new HttpHeaders({
      'Content-Type':  'application/json',

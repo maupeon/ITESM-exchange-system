@@ -7,7 +7,7 @@ import { map, catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class WeeksService {
-  endpoint = 'http://localhost:3000/weeks';
+  endpoint = 'https://api-itesm.azurewebsites.net/weeks';
 	 httpOptions = {
   		headers: new HttpHeaders({
     	'Content-Type':  'application/json',
